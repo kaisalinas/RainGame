@@ -14,7 +14,7 @@ fill(0, 0, 255);
 stroke(0, 0, 255);
 ellipse(randomNumber, raindropy, 50, 50);
 if(gameOver == false){
-raindropy+=10;
+raindropy+=5;
 }
 else{
   raindropy = 1;
@@ -36,7 +36,7 @@ text("Score: " + score, 20, 20);
 }
 
 void checkCatch(){
-     if (raindropy>900 && x<randomNumber && randomNumbe ){
+     if (raindropy>900 && randomNumber>x && randomNumber<x+75 ){
           score++;
             raindropy+=10;
 raindropy = 1;
@@ -49,10 +49,10 @@ randomNumber = (int) random(width);
 void keyPressed() {
 if(keyCode==RIGHT){
   //what you want to if up is pressed
-  x+=50;
+  x+=60;
 }
 if(keyCode==LEFT){
-x-=50;
+x-=60;
 }
 
 }
